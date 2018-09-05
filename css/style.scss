@@ -1,5 +1,19 @@
 @import "reboot";
 @import "font";
+@import "variables";
+@import "mixins";
+
+//asignacion de la variable ej: de color//
+$arsenal-color: #cd0c13;
+$aston-color: #6b0019;
+$burnley-color: #789ab2;
+
+//mixins parametro y variables//
+@mixin camiseta-back ($url, $color-equipo) {
+    background-image: url($url);
+    background-color: $color-equipo;
+    
+}
 
 html, body {
     width: 100%;
@@ -13,60 +27,56 @@ html, body {
     background-attachment: fixed;
     background-size: 35%;
     background-position: 15% 200PX;
+
+    img {
+        float: right;
+        width: 450px;
+        margin-right: 10%;
+        margin-top: 10%;
+    }
 }
 
 .escudo {
-    display: flex;
+    display: flex;  
     align-items: center;
-}
+    
+    img {
+        height: 70%;
+        margin: 10px 20px 10px 50px;
 
-.escudo img {
-    height: 70%;
-    margin: 10px 20px 10px 50px;
-}
-
-.escudo h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-    color:  #cd0c13;
-}
-
-.camisetas img {
-    float: right;
-    width: 450px;
-    margin-right: 10%;
-    margin-top: 10%;
+    h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        color:  #cd0c13;
+        }    
+    }
 }
 
 #arsenal-local {
-    background-image: url("../img/Arsenal_Home_1000x1000.png");
-    background-color: black;
+    //llamado de mixins parametro y variables//
+    @include camiseta-back("../img/Arsenal_Home_1000x1000.png", $arsenal-color-equipo);
+    // llamada de la variable Ej: de color//
 
 }
 #arsenal-visit {
-    background-image: url("../img/Arsenal_Away_1000x1000.png");
-    background-color: #cd0c13;
+    @include camiseta-back("../img/Arsenal_Away_1000x1000.png", $arsenal-color-equipo);
 
 }
 
 #aston-local {
-    background-image: url("../img/Aston_Villa_Home_1000x1000.png");
-    background-color: #6b0019;
+    @include camiseta-back("../img/Aston_Villa_Home_1000x1000.png", $aston-color-equipo);
 
 }
 #aston-visit {
-    background-image: url("../img/Aston_Villa_Away_1000x1000.png");
-    background-color: #6b0019;
+    @include camiseta-back("../img/Aston_Villa_Away_1000x1000.png", $aston-color-equipo);
 
 }
 
 #burnley-local {
-    background-image: url("../img/Burnley_Home_1000x1000.png");
-    background-color: #789ab2;
+    @include camiseta-back("../img/Burnley_Home_1000x1000.png", $burnley-color-equipo);
 
 }
 #burnley-visit {
-    background-image: url("../img/Burnley_Away_1000x1000.png");
-    background-color: #789ab2;
+    @include camiseta-back("../img/Burnley_Away_1000x1000.png", $burnley-color-equipo);
 
 }

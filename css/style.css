@@ -475,6 +475,13 @@ html, body {
   background-position: 15% 200PX;
 }
 
+.camisetas img {
+  float: right;
+  width: 450px;
+  margin-right: 10%;
+  margin-top: 10%;
+}
+
 .escudo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -489,22 +496,15 @@ html, body {
   margin: 10px 20px 10px 50px;
 }
 
-.escudo h2 {
+.escudo img h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
   color: #cd0c13;
 }
 
-.camisetas img {
-  float: right;
-  width: 450px;
-  margin-right: 10%;
-  margin-top: 10%;
-}
-
 #arsenal-local {
   background-image: url("../img/Arsenal_Home_1000x1000.png");
-  background-color: black;
+  background-color: #cd0c13;
 }
 
 #arsenal-visit {
