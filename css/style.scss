@@ -3,18 +3,6 @@
 @import "variables";
 @import "mixins";
 
-//asignacion de la variable ej: de color//
-$arsenal-color: #cd0c13;
-$aston-color: #6b0019;
-$burnley-color: #789ab2;
-
-//mixins parametro y variables//
-@mixin camiseta-back ($url, $color-equipo) {
-    background-image: url($url);
-    background-color: $color-equipo;
-    
-}
-
 html, body {
     width: 100%;
     height: 100%;
@@ -51,6 +39,7 @@ html, body {
         }    
     }
 }
+
 
 #arsenal-local {
     //llamado de mixins parametro y variables//
